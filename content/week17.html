@@ -1,76 +1,153 @@
-<h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>每週練習內容</h1>
-<h2>week2</h2>
-<p>建立CMSIMDE網站</p>
-<p><a href="https://www.youtube.com/watch?v=E16xzFYAxjI&amp;feature=youtu.be">https://www.youtube.com/watch?v=E16xzFYAxjI&amp;feature=youtu.be</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/E16xzFYAxjI" width="560"></iframe></p>
-<h2>week3</h2>
-<p>先將 Y:\portablegit\bin\sh.exe 改名為 sh_rename_for_solvespace.exe</p>
-<p>re sh.exe sh_rename_for_solvespace.exe</p>
-<p><span>*p.s.  re 是重新命名的指令</span></p>
-<p><span>git version 查驗 git 版本 ( 需要git 2.13 版本以上 )</span></p>
-<p><span>git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace</span></p>
-<p>*p.s. <span>使用  git clone </span><span>--recurse-submodules 取得所有子模組資料，clone 前請先確認</span></p>
-<p><span>是否有重複檔名的資料，並耐心等候取得資料，以確保檔案完整性</span></p>
-<p>上述指令同:</p>
-<p>git clone <span><a href="https://github.com/solvespace/solvespace.git">https://github.com/solvespace/solvespace.git</a> </span></p>
-<p><span>cd solvespace</span></p>
-<p><span>git submodule init</span></p>
-<p><span>git submodule update</span></p>
-<p><span>編輯 Y:\tmp\solvespace\extlib\angle\CMakeLists.txt 將 713 行和 714行註解掉，像底下這樣</span></p>
-<p><span>#list(APPEND ANGLE_DEFINITIONS<br/><span>#"-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ \"d3dcompiler_47.dll\", \"d3dcompiler_46.dll\", \"d3dcompiler_43.dll\" }")</span><br/><span>endif()</span></span></p>
-<p>*p.s.  漏掉此步驟，否則後續編譯會有錯誤</p>
-<p>到 <span>Y:\tmp\solvespace\extlib\libpng 目錄底下新建名為 build目錄</span></p>
-<p>cd solvespace </p>
-<p>cd extlib</p>
-<p>cd libpng</p>
-<p>mkdir build</p>
-<p>cd build</p>
-<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
-<p>mingw32-make</p>
-<p><span><span>重新命名 Y:\tmp\solvespace\extlib\libpng\build\libpng.dll.a 改名為 libpng_static.a 並且複製到 Y:\msys64\mingw64\lib</span></span></p>
-<p><span><span>回到 Y:\tmp\solvespace 目錄下新建名為 build目錄</span></span></p>
-<p>mkdir build</p>
-<p>cd build</p>
-<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
-<p>mingw32-make</p>
-<p>完成以上編譯後執行 <span>Y:</span>tmp\solvespace\build\bin\solvespace.exe   ，若能成功執行就能確定完成 Solvespace 編譯</p>
-<p><a href="https://www.youtube.com/watch?v=79AgX0GJhOg&amp;feature=youtu.be">https://www.youtube.com/watch?v=79AgX0GJhOg&amp;feature=youtu.be</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/79AgX0GJhOg" width="560"></iframe></p>
-<h2>week5</h2>
-<p><span>Solvespace 操作與繪圖示範</span></p>
-<p><a href="https://www.youtube.com/watch?v=U0QBwD6Xylo">https://www.youtube.com/watch?v=U0QBwD6Xylo</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/U0QBwD6Xylo" width="560"></iframe></p>
-<h2>week6</h2>
-<p>V-rep 網際 Python remote API 雙輪車控制模擬</p>
-<p><a href="https://www.youtube.com/watch?v=lJ5U_sepaAk">https://www.youtube.com/watch?v=lJ5U_sepaAk</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/lJ5U_sepaAk" width="560"></iframe></p>
-<p></p>
-<p></p>
-<h2>week8</h2>
-<h2>week9</h2>
-<h2>week16</h2>
-<p>請 2a 各學員根據<span> </span><a href="http://mde.tw/cad2019/content/Task2.html" rel="nofollow">Task2</a><span> </span>中<span> </span><a href="https://cad.onshape.com/documents/0c757e42f113318abade702c/w/83a3818a1aef5d4234265d9c/e/0284daee1c8866acdbcf0b9d" rel="nofollow">Onshpae 越野車零組件</a>之尺寸與配置, 利用 Solvespace 完成簡化後的越野車零組件設計繪圖.</p>
-<p>完成後請將所有零組件檔案, 放入個人倉儲 downloads 目錄中的 solvespace 子目錄, 然後將越野車組立件, 以 STL 格式轉出後, 轉入 V-rep 後, 將 ttt 檔案放入個人倉儲 downloads 目錄中的 solvespace 子目錄.</p>
-<p>並將越野車組立件, 以 WRL 格式轉出後, 轉入 Webots 後, 將 wbt 檔案放入個人倉儲 downloads 目錄中的 solvespace 子目錄.</p>
-<p>完成上述查驗任務後, 請將簡要過程拍成至多 3 分鐘的帶說明字幕導覽影片, 並將影片嵌入 W16 查驗頁面後, 將提交連結, 頁面連結與影片連結放入下列回應中, 附上操作心得, 並針對所碰到的問題進行說明討論.</p>
-<p><a href="https://www.youtube.com/watch?v=kEE0Srb67Y0">https://www.youtube.com/watch?v=kEE0Srb67Y0</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/kEE0Srb67Y0" width="560"></iframe></p>
-<h2>week17</h2>
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>s40723152-cad2019</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723152-cad2019</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='每週練習內容.html'>每週練習內容</a><ul class='dropdown'><li><a href='week2.html'>week2</a><li><a href='week3.html'>week3</a><li><a href='week5.html'>week5</a><li><a href='week6.html'>week6</a><li><a href='week8.html'>week8</a><li><a href='week9.html'>week9</a><li><a href='week16.html'>week16</a><li><a href='week17.html'>week17</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">week16 << <a href='week16.html'>Previous</a> <br /><h1>week17</h1>
 <p>Building the dynamic shapes</p>
 <p>If we want our robot to be <a href="http://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm">dynamically enabled</a>, i.e. react to collisions, fall, etc., then we need to create/configure the shapes appropriately: a shape can be:</p>
 <p><span> </span></p>
@@ -116,23 +193,23 @@
 <p>We select object <em>robot</em>, copy-and-paste it into a new scene (in order to keep the original model intact) and start the <span><a href="http://www.coppeliarobotics.com/helpFiles/en/triangleEditMode.htm">triangle edit mode</a></span>. If object <em>robot</em> was a compound shape, we would first have had to ungroup it ([Menu bar --&gt; Edit --&gt; Grouping/Merging --&gt; Ungroup selected shapes]) then merge the individual shapes ([Menu bar --&gt; Edit --&gt; Grouping/Merging --&gt; Merge selected shapes]) before being able to start the triangle edit mode. Now we select the few triangles that represent the power cable, and erase them. Then we select all triangles in that shape, and click Extract cylinder. We can now leave the edit mode and we have our base object represented as a pure cylinder:</p>
 <p><span> </span></p>
 <p>我們選擇對像機器人，將其複制並粘貼到新場景中（以保持原始模型不變），然後啟動<u>三角形編輯模式</u>。如果對像機器人是複合形狀，我們首先必須將其取消組合（<span>[</span>菜單欄<span>-&gt;</span>編輯<span>-&gt;</span>分組<span>/</span>合併<span>-&gt;</span>取消組合所選形狀<span>]</span>），然後合併各個形狀（<span>[</span>菜單欄<span>-&gt;</span>在啟動三角形編輯模式之前，請編輯<span>-&gt;</span>分組<span>/</span>合併<span>-&gt;</span>合併選定的形狀<span>]</span>）。現在，我們選擇代表電源線的幾個三角形，並將其刪除。然後，選擇該形狀中的所有三角形，然後單擊“提取圓柱體”。現在我們可以離開編輯模式，我們的基礎對象表示為純圓柱體：</p>
-<p>  <img alt="" height="275" src="/images/modelTut15.jpg" width="640"/></p>
+<p>  <img alt="" height="275" src="./../images/modelTut15.jpg" width="640"/></p>
 <p style="text-align: center;">[Pure cylinder generation procedure, in the triangle edit mode]</p>
 <p style="text-align: center;"><span>[</span>純圓柱體生成過程，在三角形編輯模式下<span>]</span></p>
 <p><span> </span></p>
 <p>We rename the new shape (with a double-click on its name in the <span><a href="http://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">scene hierarchy</a></span>) as <em>robot_dyn</em>, assign it to visibility layer 9, then copy it to the original scene. The rest of the links will be modelled as convex shapes, or compound convex shapes. We now select the first mobile link (i.e. object <em>robot_link1</em>) and generate a convex shape from it with [Menu bar --&gt; Add --&gt; Convex hull of selection]. We rename it to <em>robot_link_dyn1</em> and assign it to visibility layer 9. When extracting the convex hull doesn't retain enough details of the original shape, then you could still manually extract several convex hulls from its composing elements, then group all the convex hulls with [Menu bar --&gt; Edit --&gt; Grouping/Merging --&gt; Group selected shapes]. If that appears to be problematic or time consuming, then you can automatically extract a convex decomposed shape with [Menu bar --&gt; Add --&gt; Convex decomposition of selection...]:</p>
 <p><span> </span></p>
 <p>我們將新形狀重命名（在場景層次中雙擊其名稱）為<em><span>robot_dyn</span></em>，將其分配給可見性層<span>9</span>，然後將其複製到原始場景。 其餘鏈接將建模為凸形或複合凸形。 現在，我們選擇第一個移動鏈接（即對象<em><span>robot_link1</span></em>），並使用<span>[</span>菜單欄<span>-&gt;</span>添加<span>-&gt;</span>選擇的凸包<span>]</span>從中生成凸形。 我們將其重命名為<em><span>robot_link_dyn1</span></em>並將其分配給可見性層<span>9</span>。當提取凸包並沒有保留足夠的原始形狀細節時，您仍然可以手動從其組成元素中提取多個凸包，然後將所有凸包與<span> [</span>菜單欄<span>-&gt;</span>編輯<span>-&gt;</span>分組<span>/</span>合併<span>-&gt;</span>對選定形狀進行分組<span>]</span>。 如果這似乎有問題或很耗時，則可以使用<span>[</span>菜單欄<span>-&gt;</span>添加<span>-&gt;</span>選擇的凸分解<span>...]</span>自動提取凸分解的形狀：</p>
-<p>                     <img alt="" height="196" src="/images/modelTut16.jpg" width="450"/></p>
+<p>                     <img alt="" height="196" src="./../images/modelTut16.jpg" width="450"/></p>
 <p style="text-align: center;">[Original shape, and convex shape pendant]</p>
 <p style="text-align: center;"><span>[</span>原始形狀和凸形吊墜<span>]</span></p>
-<p style="text-align: center;"><span>           <img alt="" height="191" src="/images/modelTut17.jpg" width="450"/></span></p>
+<p style="text-align: center;"><span>           <img alt="" height="191" src="./../images/modelTut17.jpg" width="450"/></span></p>
 <p style="text-align: center;">[Original shape, and convex decomposed shape pendant]</p>
 <p style="text-align: center;"><span>[</span>原始形狀和凸形分解形狀吊墜<span>]</span></p>
 <p>We now repeat the same procedure for all remaining robot links. Once that is done, we attach each visible shape to its corresponding invisible dynamic pendant. We do this by selecting first the visible shape, then via control-click selecting its dynamic pendant then [Menu bar --&gt; Edit --&gt; Make last selected object parent]. The same result can be achieved by dragging the visible shape onto its dynamic pendant in the <span><a href="http://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">scene hierarchy</a></span>:</p>
 <p></p>
 <p>現在，我們對所有剩餘的機器人鏈接重複相同的過程。 完成後，我們將每個可見的形狀附加到其相應的不可見的動態吊墜上。 為此，我們先選擇可見的形狀，然後按住<span>Control</span>鍵並單擊以選擇其動態吊墜，然後選擇<span>[</span>菜單欄<span>-&gt;</span>編輯<span>-&gt;</span>將最後選擇的對象設為父對象<span>]</span>。 通過將可見形狀拖動到場景層次中的動態吊墜上，可以實現相同的結果：</p>
-<p><img alt="" height="519" src="/images/modelTut18.jpg" width="656"/></p>
+<p><img alt="" height="519" src="./../images/modelTut18.jpg" width="656"/></p>
 <p><span> </span></p>
 <p style="text-align: center;">[Visible shapes attached to their dynamic pendants]</p>
 <p style="text-align: center;"><span>[</span>動態吊墜附有可見的形狀<span>]</span></p>
@@ -145,4 +222,46 @@
 <p><span> </span></p>
 <p>Finally, we still need to tag our dynamic shapes as <strong>Body is dynamic</strong>. We do this also in the <span><a href="http://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm">shape dynamics properties</a></span>. We can then enter the mass and inertia tensor properties manually, or have those values automatically computed (recommended) by clicking <strong>Compute mass &amp; inertia properties for selected convex shapes</strong>. Remember also <span><a href="http://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#masses">this</a></span> and <span><a href="http://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#inertias">that</a></span> dynamic design considerations. This dynamic base of the robot is a special case: most of the time we want the base of the robot (i.e. <em>robot_dyn</em>) to be non-dynamic (i.e. static), otherwise, if used alone, the robot might fall during movement. But as soon as we attach the base of the robot to a mobile platform, we want the base to become dynamic (i.e. non-static). We do this by enabling the <strong>Set to dynamic if gets parent</strong> item, then disabling the<strong> Body is dynamic item</strong>. Now run the simulation: all dynamic shapes, except for the base of the robot, should fall. That attached visual shapes will follow their dynamic pendants.</p>
 <p><span> </span></p>
-<p>最後，我們仍然需要將動態形狀標記為“<strong>身體是動態的</strong>”。我們也在<u>形狀動力學屬性</u>中執行此操作。然後，我們可以手動輸入質量和慣性張量屬性，或者通過單擊“<strong>計算選定凸形的質量和慣性屬性</strong>”來自動計算（推薦）那些值。還請記住這一點以及該動態設計注意事項。機器人的這種動態基座是一種特殊情況：大多數時候，我們希望機器人的基座（即<em><span>robot_dyn</span></em>）是非動態的（即靜態），否則，如果單獨使用，則機器人可能會在運動過程中掉落。但是，一旦我們將機器人的底座連接到移動平台上，我們就希望底座變得動態（即非靜態）。我們通過啟用“<strong>如果獲取父項時設置為動態</strong>”項，然後禁用“<strong>主體為動態</strong>”項來做到這一點。現在運行仿真：除了機器人的基座之外，所有動態形狀都應下降。附加的視覺形狀將跟隨其動態吊墜。</p>
+<p>最後，我們仍然需要將動態形狀標記為“<strong>身體是動態的</strong>”。我們也在<u>形狀動力學屬性</u>中執行此操作。然後，我們可以手動輸入質量和慣性張量屬性，或者通過單擊“<strong>計算選定凸形的質量和慣性屬性</strong>”來自動計算（推薦）那些值。還請記住這一點以及該動態設計注意事項。機器人的這種動態基座是一種特殊情況：大多數時候，我們希望機器人的基座（即<em><span>robot_dyn</span></em>）是非動態的（即靜態），否則，如果單獨使用，則機器人可能會在運動過程中掉落。但是，一旦我們將機器人的底座連接到移動平台上，我們就希望底座變得動態（即非靜態）。我們通過啟用“<strong>如果獲取父項時設置為動態</strong>”項，然後禁用“<strong>主體為動態</strong>”項來做到這一點。現在運行仿真：除了機器人的基座之外，所有動態形狀都應下降。附加的視覺形狀將跟隨其動態吊墜。</p><br />week16 << <a href='week16.html'>Previous</a> </div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
