@@ -361,7 +361,7 @@ Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
 
 [協同翻譯](https://s40723152.github.io/cad2019/content/week17.html)
 
-&lt;img src="../images/555.PNG" width="600px"&gt;
+&lt;img src="../images/555.png" width="600px"&gt;
 
 </t>
 <t tx="leo.20200109234727.1">&lt;section data-markdown&gt;
