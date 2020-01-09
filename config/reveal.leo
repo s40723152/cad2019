@@ -45,9 +45,8 @@
 </vnodes>
 <tnodes>
 <t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">## S40723152簡報機械電腦輔助設計實習
-
-### KMOLab
+<t tx="leo.20180902120523.10">## S40723152簡報
+機械電腦輔助設計實習
 
 &lt;small&gt;
 Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
@@ -55,7 +54,7 @@ Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
 
 [網誌](./../blog/index.html)
 [倉儲](https://github.com/s40723152/cad2019)
-&lt;iframe src="https://www.youtube.com/watch?v=qGcRXbB0JO8" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/qGcRXbB0JO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 
 
