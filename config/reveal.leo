@@ -21,6 +21,27 @@
 <v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200109225623.1"><vh>newHeadline</vh>
+<v t="leo.20200109225648.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20200109234727.1"><vh>1</vh>
+<v t="leo.20200109234731.1"><vh>1</vh></v>
+</v>
+<v t="leo.20200109235436.1"><vh>2</vh>
+<v t="leo.20200109235440.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20200109235638.1"><vh>3</vh>
+<v t="leo.20200109235650.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20200110000039.1"><vh>4</vh>
+<v t="leo.20200110000053.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20200110000435.1"><vh>5</vh>
+<v t="leo.20200110000438.1"><vh>newHeadline</vh></v>
+</v>
+<v t="leo.20200110000941.1"><vh>6</vh>
+<v t="leo.20200110000958.1"><vh>newHeadline</vh></v>
+</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -54,6 +75,8 @@ Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
 
 [網誌](./../blog/index.html)
 [倉儲](https://github.com/s40723152/cad2019)
+
+Week17越野車零件繪圖考試
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/qGcRXbB0JO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 
@@ -325,5 +348,99 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="leo.20180902120538.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
+<t tx="leo.20200109225623.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200109225648.1" icons="5d7100287d7101285804000000747970657102580400000066696c65710368035824000000433a2f55736572732f4368656e2f50696374757265732fe69caae591bde5908d2e626d707104580700000072656c5061746871055824000000433a2f55736572732f4368656e2f50696374757265732fe69caae591bde5908d2e626d707106580500000077686572657107580e0000006265666f7265486561646c696e6571085807000000796f666673657471094b005807000000786f6666736574710a4b02580400000078706164710b4b0158020000006f6e710c5805000000564e6f6465710d757d710e286802680368035824000000433a2f55736572732f4368656e2f50696374757265732fe69caae591bde5908d2e626d70710f68055824000000433a2f55736572732f4368656e2f50696374757265732fe69caae591bde5908d2e626d7071106807680868094b00680a4b02680b4b01680c680d75652e">## Week17分組協同任務
+
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+[協同翻譯](https://s40723152.github.io/cad2019/content/week17.html)
+
+&lt;img src="C:\Users\Chen\Desktop\555.png" width="600px"&gt;
+
+</t>
+<t tx="leo.20200109234727.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200109234731.1">## Week16 2a考試內容
+越野車零組件設計繪圖
+
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+[網站連結](https://s40723152.github.io/cad2019/content/week16.html)
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/kEE0Srb67Y0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200109235436.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200109235440.1">## V-rep 網際 Python remote API 雙輪車控制模擬
+
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+[網站連結](https://s40723152.github.io/cad2019/content/week6.html)
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/lJ5U_sepaAk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200109235638.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200109235650.1">## Solvespace繪圖示範
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+
+[網站連結](https://s40723152.github.io/cad2019/content/week5.html)
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/U0QBwD6Xylo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200110000039.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200110000053.1">## Solvespace編譯
+
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+
+[網站連結](https://s40723152.github.io/cad2019/content/week3.html)
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/79AgX0GJhOg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200110000435.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200110000438.1">## 建立Cmsimde網站
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+
+[網站連結](https://s40723152.github.io/cad2019/content/week2.html)
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/E16xzFYAxjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200110000941.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200110000958.1">## 課程心得
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+心得:由於是第一次上嚴老師的課程，導致我有許多的部分，都不太熟悉，也有許多地方未完成，但我在學期末的這個禮拜，我也盡我所能，完成了之前沒完成的地方，經過這學期的課程，也讓我學習到我以前從未碰觸過的領域，以後我也會好好鑽研老師這學期所上的課程。</t>
 </tnodes>
 </leo_file>
