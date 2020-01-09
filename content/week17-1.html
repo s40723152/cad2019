@@ -56,12 +56,14 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
@@ -97,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -116,14 +123,14 @@ init_mathjax();
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>s40723152-cad2019</h1>
+                <h1>s40723103-cad2019 </h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723152-cad2019</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723103-cad2019 </a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -136,7 +143,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='每週練習內容.html'>每週練習內容</a><ul class='dropdown'><li><a href='week2.html'>week2</a><li><a href='week3.html'>week3</a><li><a href='week5.html'>week5</a><li><a href='week6.html'>week6</a><li><a href='week8.html'>week8</a><li><a href='week9.html'>week9</a><li><a href='week16.html'>week16</a><li class='has-children'><a href='week17.html'>week17</a><ul class='dropdown'><li><a href='week17-1 越野車零件設計繪圖操作流程.html'>week17-1 越野車零件設計繪圖操作流程</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='處理錯誤程序.html'>處理錯誤程序</a><li><a href='webots.html'>webots</a></li></ul><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='每週練習內容.html'>每週練習內容</a><ul class='dropdown'><li><a href='Week2.html'>Week2</a><li><a href='Week3.html'>Week3</a><li><a href='Week5.html'>Week5</a><li><a href='Week6.html'>Week6</a><li><a href='Week7.html'>Week7</a><li><a href='Week8.html'>Week8</a><li><a href='Week9.html'>Week9</a><li><a href='Week10-11.html'>Week10-11</a><li><a href='Week12.html'>Week12</a><li><a href='Week13.html'>Week13</a><li><a href='Week14.html'>Week14</a><li><a href='Week15.html'>Week15</a><li><a href='Week16.html'>Week16</a><li class='has-children'><a href='Week17.html'>Week17</a><ul class='dropdown'><li><a href='week17-1.html'>week17-1</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,8 +154,17 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">week6 << <a href='week6.html'>Previous</a> <a href='week9.html'>Next</a> >> week9<br /><h1>week8</h1>
-<br />week6 << <a href='week6.html'>Previous</a> <a href='week9.html'>Next</a> >> week9</div>
+    <div id="tipue_search_content">Week17 << <a href='Week17.html'>Previous</a> <br /><h1>week17-1</h1>
+<p><img alt="" height="864" src="./../images/solvespace_WTlVnnJ6MS.png" width="843"/></p>
+<p>過程中遇到設限</p>
+<p><img alt="" height="415" src="./../images/solvespace_6sclKq4lUh.png" width="800"/></p>
+<p>最後轉出到v-rep時會變成翻倒狀</p>
+<p><img alt="" height="433" src="./../images/vrep_gwJJA3vXMY.png" width="800"/></p>
+<p></p>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" height="550" src="//www.youtube.com/embed/F8foQ2kmOts" width="650"></iframe></p>
+<p>心得:</p>
+<p>在這一次的繪圖過程，阻礙滿滿，也很常繪圖到一半就錯誤然後必須刪除草圖，最後在時間下，硬是畫到一半而已，希望下次的考試能順手，也希望錯誤不要這麼多。</p><br />Week17 << <a href='Week17.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
