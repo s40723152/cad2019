@@ -27,6 +27,9 @@
 <v t="leo.20200109234727.1"><vh>1</vh>
 <v t="leo.20200109234731.1"><vh>1</vh></v>
 </v>
+<v t="leo.20200110090022.1"><vh>newHeadline</vh>
+<v t="leo.20200110090025.1"><vh>1.5</vh></v>
+</v>
 <v t="leo.20200109235436.1"><vh>2</vh>
 <v t="leo.20200109235440.1"><vh>newHeadline</vh></v>
 </v>
@@ -442,5 +445,18 @@ Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
 &lt;/small&gt;
 
 心得:由於是第一次上嚴老師的課程，導致我有許多的部分，都不太熟悉，也有許多地方未完成，但我在學期末的這個禮拜，我也盡我所能，完成了之前沒完成的地方，經過這學期的課程，也讓我學習到我以前從未碰觸過的領域，以後我也會好好鑽研老師這學期所上的課程。</t>
+<t tx="leo.20200110090022.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200110090025.1">## 期中報告影片
+
+&lt;small&gt;
+Created by [陳俊任](https://s40723152.github.io/cad2019/content/index.html)
+&lt;/small&gt;
+
+[網站連結](https://s40723152.github.io/cad2019/content/week9.html)
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/alNjf8fBxk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 </tnodes>
 </leo_file>
