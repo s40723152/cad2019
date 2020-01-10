@@ -65,7 +65,8 @@
 <h2>week9</h2>
 <p>期中考週報告影片</p>
 <p><a href="https://www.youtube.com/watch?v=alNjf8fBxk8&amp;t=4s">https://www.youtube.com/watch?v=alNjf8fBxk8&amp;t=4s</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/alNjf8fBxk8" width="560"></iframe></p><h2>week16</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/alNjf8fBxk8" width="560"></iframe></p>
+<h2>week16</h2>
 <p>請 2a 各學員根據<span> </span><a href="http://mde.tw/cad2019/content/Task2.html" rel="nofollow">Task2</a><span> </span>中<span> </span><a href="https://cad.onshape.com/documents/0c757e42f113318abade702c/w/83a3818a1aef5d4234265d9c/e/0284daee1c8866acdbcf0b9d" rel="nofollow">Onshpae 越野車零組件</a>之尺寸與配置, 利用 Solvespace 完成簡化後的越野車零組件設計繪圖.</p>
 <p>完成後請將所有零組件檔案, 放入個人倉儲 downloads 目錄中的 solvespace 子目錄, 然後將越野車組立件, 以 STL 格式轉出後, 轉入 V-rep 後, 將 ttt 檔案放入個人倉儲 downloads 目錄中的 solvespace 子目錄.</p>
 <p>並將越野車組立件, 以 WRL 格式轉出後, 轉入 Webots 後, 將 wbt 檔案放入個人倉儲 downloads 目錄中的 solvespace 子目錄.</p>
@@ -147,7 +148,8 @@
 <p><span> </span></p>
 <p>Finally, we still need to tag our dynamic shapes as <strong>Body is dynamic</strong>. We do this also in the <span><a href="http://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm">shape dynamics properties</a></span>. We can then enter the mass and inertia tensor properties manually, or have those values automatically computed (recommended) by clicking <strong>Compute mass &amp; inertia properties for selected convex shapes</strong>. Remember also <span><a href="http://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#masses">this</a></span> and <span><a href="http://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#inertias">that</a></span> dynamic design considerations. This dynamic base of the robot is a special case: most of the time we want the base of the robot (i.e. <em>robot_dyn</em>) to be non-dynamic (i.e. static), otherwise, if used alone, the robot might fall during movement. But as soon as we attach the base of the robot to a mobile platform, we want the base to become dynamic (i.e. non-static). We do this by enabling the <strong>Set to dynamic if gets parent</strong> item, then disabling the<strong> Body is dynamic item</strong>. Now run the simulation: all dynamic shapes, except for the base of the robot, should fall. That attached visual shapes will follow their dynamic pendants.</p>
 <p><span> </span></p>
-<p>最後，我們仍然需要將動態形狀標記為“<strong>身體是動態的</strong>”。我們也在<u>形狀動力學屬性</u>中執行此操作。然後，我們可以手動輸入質量和慣性張量屬性，或者通過單擊“<strong>計算選定凸形的質量和慣性屬性</strong>”來自動計算（推薦）那些值。還請記住這一點以及該動態設計注意事項。機器人的這種動態基座是一種特殊情況：大多數時候，我們希望機器人的基座（即<em><span>robot_dyn</span></em>）是非動態的（即靜態），否則，如果單獨使用，則機器人可能會在運動過程中掉落。但是，一旦我們將機器人的底座連接到移動平台上，我們就希望底座變得動態（即非靜態）。我們通過啟用“<strong>如果獲取父項時設置為動態</strong>”項，然後禁用“<strong>主體為動態</strong>”項來做到這一點。現在運行仿真：除了機器人的基座之外，所有動態形狀都應下降。附加的視覺形狀將跟隨其動態吊墜。</p><h3>week17-1 越野車零件設計繪圖操作流程</h3>
+<p>最後，我們仍然需要將動態形狀標記為“<strong>身體是動態的</strong>”。我們也在<u>形狀動力學屬性</u>中執行此操作。然後，我們可以手動輸入質量和慣性張量屬性，或者通過單擊“<strong>計算選定凸形的質量和慣性屬性</strong>”來自動計算（推薦）那些值。還請記住這一點以及該動態設計注意事項。機器人的這種動態基座是一種特殊情況：大多數時候，我們希望機器人的基座（即<em><span>robot_dyn</span></em>）是非動態的（即靜態），否則，如果單獨使用，則機器人可能會在運動過程中掉落。但是，一旦我們將機器人的底座連接到移動平台上，我們就希望底座變得動態（即非靜態）。我們通過啟用“<strong>如果獲取父項時設置為動態</strong>”項，然後禁用“<strong>主體為動態</strong>”項來做到這一點。現在運行仿真：除了機器人的基座之外，所有動態形狀都應下降。附加的視覺形狀將跟隨其動態吊墜。</p>
+<h3>week17-1 越野車零件設計繪圖操作流程</h3>
 <p><img alt="" height="966" src="/images/未命名.jpg" width="1920"/></p>
 <p style="text-align: center;">觀察車子外型</p>
 <p><img alt="" height="1080" src="/images/111.png" width="1920"/></p>
@@ -158,3 +160,7 @@
 <p>操作過程影片</p>
 <p><a href="https://www.youtube.com/watch?v=qGcRXbB0JO8">https://www.youtube.com/watch?v=qGcRXbB0JO8</a><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/qGcRXbB0JO8" width="560"></iframe></p>
 <p>心得:<span>由於這禮拜的分配時間的問題，翻譯時間佔用太多時間，導致任務二來不及放入個人網站中，下次我會好好分配時間，完成任務。</span></p>
+<h1>期末報告</h1>
+<p><a href="https://www.youtube.com/watch?v=TYjpl-IS858">https://www.youtube.com/watch?v=TYjpl-IS858</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/TYjpl-IS858" width="560"></iframe></p>
+<p>課程心得:<span>由於是第一次上嚴老師的課程，導致我有許多的部分，都不太熟悉，也有許多地方未完成，但我在學期末的這個禮拜，我也盡我所能，完成了之前沒完成的地方，經過這學期的課程，也讓我學習到我以前從未碰觸過的領域，以後我也會好好鑽研老師這學期所上的課程。</span></p>
